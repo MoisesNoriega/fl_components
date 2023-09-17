@@ -31,6 +31,11 @@ class AppRouters {
         name: 'Card',
         screen: const CardScreen(),
         icon: Icons.card_membership_outlined),
+    MenuOption(
+        route: 'avatar',
+        name: 'Avatar',
+        screen: const AvatarScreen(),
+        icon: Icons.group_outlined),
 
   ];
 
