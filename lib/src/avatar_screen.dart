@@ -10,7 +10,7 @@ class AvatarScreen extends StatelessWidget {
         title: const Text('Avatar'),
         actions:  [
            Container(
-            margin: const EdgeInsets.only( right: 10),
+            margin: const EdgeInsets.only( right: 10),//separacion externo   pading separacion interno
             child:const CircleAvatar(
               child: Text('MN'),
             ),

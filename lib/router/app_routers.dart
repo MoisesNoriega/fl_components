@@ -36,6 +36,11 @@ class AppRouters {
         name: 'Avatar',
         screen: const AvatarScreen(),
         icon: Icons.group_outlined),
+    MenuOption(
+        route: 'animated',
+        name: 'Animated',
+        screen: const AnimatedScreen(),
+        icon: Icons.animation_outlined),
 
   ];
 
