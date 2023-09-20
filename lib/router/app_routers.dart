@@ -1,4 +1,5 @@
 import 'package:fl_components/models/menu_option.dart';
+import 'package:fl_components/src/inputs_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../src/src.dart';
@@ -41,7 +42,11 @@ class AppRouters {
         name: 'Animated',
         screen: const AnimatedScreen(),
         icon: Icons.animation_outlined),
-
+    MenuOption(
+        route: 'inputs',
+        name: 'Inputs',
+        screen: const InputsScreen(),
+        icon: Icons.text_fields_outlined),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

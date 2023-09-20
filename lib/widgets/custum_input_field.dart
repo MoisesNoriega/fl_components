@@ -13,7 +13,9 @@ final IconData? icon;
 final IconData? suffixIcon;
 final TextInputType? keyboardType;
 final bool isPassword;
+final String formProperty;
 
+final Map<String, String> formValues;
 
   const CustomInputField({
     super.key, 
@@ -24,6 +26,8 @@ final bool isPassword;
        this.suffixIcon, 
        this.keyboardType, 
        this.isPassword= false, 
+       required this.formProperty, 
+       required this.formValues, 
 
   });
 
@@ -38,7 +42,8 @@ final bool isPassword;
       textCapitalization: TextCapitalization.words,
       keyboardType: keyboardType,
       obscureText: isPassword,
-      onChanged: (value) {//para escuchar los cambios-- es de tipo string
+      onChanged: (value) {
+        formValues[formProperty]=value;//para escuchar los cambios-- es de tipo string
       //  print('value: $value');
       },
       validator: (value) { //valida el campo
@@ -57,13 +62,13 @@ final bool isPassword;
       icon: icon == null ? null : Icon(icon), // icono recorre el textfield
       suffixIcon: suffixIcon ==null ? null : Icon(suffixIcon),
      
-      // border: OutlineInputBorder(
-      //   borderRadius: BorderRadius.only(
-      //     bottomLeft: Radius.circular(10),
-      //     topRight: Radius.circular(10),
+       border: const OutlineInputBorder(
+         borderRadius: BorderRadius.only(
+         bottomLeft: Radius.circular(10),
+         topRight: Radius.circular(10),
 
-      //   )
-      // )
+         )
+       )
       ),
     );
   }
