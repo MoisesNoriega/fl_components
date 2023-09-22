@@ -47,6 +47,11 @@ class AppRouters {
         name: 'Inputs',
         screen: const InputsScreen(),
         icon: Icons.text_fields_outlined),
+    MenuOption(
+        route: 'slider',
+        name: 'Slider',
+        screen: const SliderScreen(),
+        icon: Icons.slow_motion_video),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
